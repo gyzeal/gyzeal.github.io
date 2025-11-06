@@ -3,85 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的博客 - 首页</title>
+    <title>Archive</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header>
-        <div class="container">
-            <h1 class="site-title"><a href="index.html">我的博客</a></h1>
-            <nav class="main-nav">
-                <a href="index.html" class="active">首页</a>
-                <a href="art.html">🎨 艺术类</a>
-                <a href="agent.html">🤖 Agent开发</a>
-                <a href="rl.html">🧠 RL学习</a>
+    <div class="layout">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="avatar.jpg" alt="Profile Photo" class="avatar">
+                <h2 class="name">Your Name</h2>
+                <p class="bio">简短的个人介绍</p>
+            </div>
+            
+            <nav class="nav">
+                <a href="index.html" class="active">Posts</a>
+                <a href="art.html">艺术类</a>
+                <a href="agent.html">Agent开发</a>
+                <a href="rl.html">RL学习</a>
             </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <!-- 欢迎区域 -->
-        <section class="welcome-section">
-            <h2>欢迎来到我的博客</h2>
-            <p>在这里分享关于艺术、AI Agent 开发和强化学习的思考与实践</p>
-        </section>
-
-        <!-- 分类导航卡片 -->
-        <section class="categories-section">
-            <h2>博客分类</h2>
-            <div class="category-grid">
-                <a href="art.html" class="category-card">
-                    <div class="category-icon">🎨</div>
-                    <h3>艺术类</h3>
-                    <p>艺术创作与欣赏，美学思考</p>
-                    <span class="post-count">0 篇文章</span>
-                </a>
-                
-                <a href="agent.html" class="category-card">
-                    <div class="category-icon">🤖</div>
-                    <h3>Agent开发类</h3>
-                    <p>AI Agent 开发实践与探索</p>
-                    <span class="post-count">0 篇文章</span>
-                </a>
-                
-                <a href="rl.html" class="category-card">
-                    <div class="category-icon">🧠</div>
-                    <h3>RL学习类</h3>
-                    <p>强化学习理论与应用</p>
-                    <span class="post-count">0 篇文章</span>
-                </a>
+            
+            <div class="contact">
+                <a href="mailto:your@email.com">Email</a>
+                <a href="https://github.com/gyzeal" target="_blank">GitHub</a>
             </div>
-        </section>
+        </aside>
 
-        <!-- 最新文章 -->
-        <section class="recent-posts">
-            <h2>最新文章</h2>
-            <div class="posts-list">
-                <!-- 示例文章，写新文章时在这里添加 -->
-                <article class="post-item">
-                    <h3><a href="posts/example-post.html">欢迎来到我的博客</a></h3>
-                    <div class="post-meta">
-                        <span class="date">📅 2025-11-06</span>
-                        <span class="category">📁 <a href="art.html">艺术类</a></span>
-                    </div>
-                    <p class="post-excerpt">这是一篇示例文章，展示博客的基本格式和样式...</p>
-                    <a href="posts/example-post.html" class="read-more">阅读全文 →</a>
-                </article>
-
-                <!-- 添加更多文章时，复制上面的 article 结构 -->
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <h1 class="page-title">Archive</h1>
+            
+            <!-- 2025年 -->
+            <section class="year-section">
+                <h2 class="year">2025 <sup>1</sup></h2>
                 
-            </div>
-        </section>
-    </main>
+                <div class="month-section">
+                    <h3 class="month">November <sup>1</sup></h3>
+                    <article class="post-entry">
+                        <a href="posts/example-post.html" class="post-title">欢迎来到我的博客</a>
+                        <div class="post-info">
+                            <span class="post-date">Date: November 6, 2025</span>
+                            <span class="post-meta">Estimated Reading Time: 5 min</span>
+                            <span class="post-author">Author: Your Name</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
 
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 我的博客. All rights reserved.</p>
-            <p>Built with ❤️ using HTML & CSS</p>
-        </div>
-    </footer>
+            <!-- 添加新文章时，在这里添加对应的年份/月份/文章 -->
+            
+        </main>
+    </div>
 </body>
 </html>
 

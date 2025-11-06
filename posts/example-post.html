@@ -3,88 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎来到我的博客 - 我的博客</title>
+    <title>欢迎来到我的博客</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header>
-        <div class="container">
-            <h1 class="site-title"><a href="../index.html">我的博客</a></h1>
-            <nav class="main-nav">
-                <a href="../index.html">首页</a>
-                <a href="../art.html">🎨 艺术类</a>
-                <a href="../agent.html">🤖 Agent开发</a>
-                <a href="../rl.html">🧠 RL学习</a>
+    <div class="layout">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="../avatar.jpg" alt="Profile Photo" class="avatar">
+                <h2 class="name">Your Name</h2>
+                <p class="bio">简短的个人介绍</p>
+            </div>
+            
+            <nav class="nav">
+                <a href="../index.html">Posts</a>
+                <a href="../art.html">艺术类</a>
+                <a href="../agent.html">Agent开发</a>
+                <a href="../rl.html">RL学习</a>
             </nav>
-        </div>
-    </header>
+            
+            <div class="contact">
+                <a href="mailto:your@email.com">Email</a>
+                <a href="https://github.com/gyzeal" target="_blank">GitHub</a>
+            </div>
+        </aside>
 
-    <main class="container">
-        <!-- 文章内容 -->
-        <article class="post-container">
-            <header class="post-header">
-                <h1>欢迎来到我的博客</h1>
-                <div class="post-meta">
-                    <span class="date">📅 2025-11-06</span>
-                    <span class="category">📁 <a href="../art.html">艺术类</a></span>
-                </div>
-            </header>
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <article class="post-container">
+                <header class="post-header">
+                    <h1>欢迎来到我的博客</h1>
+                    <div class="post-meta">
+                        <span class="date">Date: November 6, 2025</span>
+                        <span class="category">Category: <a href="../art.html">艺术类</a></span>
+                    </div>
+                </header>
 
-            <div class="post-content">
-                <p>欢迎来到我的个人博客！这是一篇示例文章，展示博客的基本格式和样式。</p>
+                <div class="post-content">
+                    <p>欢迎来到我的个人博客！这是一篇示例文章，展示博客的基本格式和样式。</p>
 
-                <h2>关于这个博客</h2>
-                <p>这个博客使用纯静态HTML构建，简单而优雅。主要分享以下几个方面的内容：</p>
+                    <h2>关于这个博客</h2>
+                    <p>这个博客使用纯静态HTML构建，简单而优雅。主要分享以下几个方面的内容：</p>
 
-                <ul>
-                    <li><strong>艺术类</strong> - 艺术创作与欣赏，美学思考</li>
-                    <li><strong>Agent开发类</strong> - AI Agent 开发实践与探索</li>
-                    <li><strong>RL学习类</strong> - 强化学习理论与应用</li>
-                </ul>
+                    <ul>
+                        <li><strong>艺术类</strong> - 艺术创作与欣赏，美学思考</li>
+                        <li><strong>Agent开发类</strong> - AI Agent 开发实践与探索</li>
+                        <li><strong>RL学习类</strong> - 强化学习理论与应用</li>
+                    </ul>
 
-                <h2>如何使用</h2>
-                <p>这个博客系统非常简单易用：</p>
+                    <h2>如何使用</h2>
+                    <p>这个博客系统非常简单易用：</p>
 
-                <ol>
-                    <li>复制 <code>posts/article-template.html</code> 创建新文章</li>
-                    <li>编辑文章内容</li>
-                    <li>在相应的分类页面添加文章链接</li>
-                    <li>在首页添加到"最新文章"列表</li>
-                </ol>
+                    <ol>
+                        <li>复制 <code>posts/article-template.html</code> 创建新文章</li>
+                        <li>编辑文章内容</li>
+                        <li>在相应的分类页面添加文章链接</li>
+                        <li>在首页添加到文章归档列表</li>
+                    </ol>
 
-                <h2>代码示例</h2>
-                <p>博客支持代码高亮显示。例如一段Python代码：</p>
+                    <h2>代码示例</h2>
+                    <p>博客支持代码显示。例如一段Python代码：</p>
 
-                <pre><code>def hello_world():
+                    <pre><code>def hello_world():
     print("Hello, World!")
     return True</code></pre>
 
-                <h2>引用示例</h2>
-                <blockquote>
-                    艺术不是关于你看到了什么，而是关于你让别人看到了什么。
-                    <br>—— 埃德加·德加
-                </blockquote>
+                    <h2>引用示例</h2>
+                    <blockquote>
+                        艺术不是关于你看到了什么，而是关于你让别人看到了什么。
+                    </blockquote>
 
-                <h2>总结</h2>
-                <p>这个博客系统简单但功能完整，适合快速开始写作。如果未来需要更多功能，可以考虑迁移到Jekyll等静态网站生成器。</p>
+                    <h2>总结</h2>
+                    <p>这个博客系统简单但功能完整，适合快速开始写作。如果未来需要更多功能，可以考虑迁移到Jekyll等静态网站生成器。</p>
+                </div>
 
-                <p>希望你喜欢这个博客！</p>
-            </div>
-
-            <footer class="post-footer">
-                <a href="../art.html" class="back-link">← 返回艺术类</a>
-            </footer>
-        </article>
-    </main>
-
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 我的博客. All rights reserved.</p>
-            <p>Built with ❤️ using HTML & CSS</p>
-        </div>
-    </footer>
+                <footer class="post-footer">
+                    <a href="../art.html" class="back-link">Back to 艺术类</a>
+                </footer>
+            </article>
+        </main>
+    </div>
 </body>
 </html>
 

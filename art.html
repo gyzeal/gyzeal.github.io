@@ -3,63 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>艺术类 - 我的博客</title>
+    <title>艺术类</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header>
-        <div class="container">
-            <h1 class="site-title"><a href="index.html">我的博客</a></h1>
-            <nav class="main-nav">
-                <a href="index.html">首页</a>
-                <a href="art.html" class="active">🎨 艺术类</a>
-                <a href="agent.html">🤖 Agent开发</a>
-                <a href="rl.html">🧠 RL学习</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <!-- 分类头部 -->
-        <div class="category-header">
-            <h1>🎨 艺术类</h1>
-            <p class="category-description">艺术创作与欣赏，美学思考与探索</p>
-        </div>
-
-        <!-- 文章列表 -->
-        <div class="posts-list">
-            <!-- 示例文章 -->
-            <article class="post-item">
-                <h3><a href="posts/example-post.html">欢迎来到我的博客</a></h3>
-                <div class="post-meta">
-                    <span class="date">📅 2025-11-06</span>
-                    <span class="category">📁 艺术类</span>
-                </div>
-                <p class="post-excerpt">这是一篇示例文章，展示博客的基本格式和样式。你可以在这里写关于艺术、设计、创作的内容...</p>
-                <a href="posts/example-post.html" class="read-more">阅读全文 →</a>
-            </article>
-
-            <!-- 当写新的艺术类文章时，在这里添加新的 article 块 -->
-            <!-- 复制上面的 article 结构，修改链接、标题、日期和摘要 -->
-
-            <!-- 如果暂时没有文章，可以显示空状态 -->
-            <!-- 
-            <div class="empty-state">
-                <div style="font-size: 4rem;">📝</div>
-                <p>暂时还没有文章，敬请期待...</p>
+    <div class="layout">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="avatar.jpg" alt="Profile Photo" class="avatar">
+                <h2 class="name">Your Name</h2>
+                <p class="bio">简短的个人介绍</p>
             </div>
-            -->
-        </div>
-    </main>
+            
+            <nav class="nav">
+                <a href="index.html">Posts</a>
+                <a href="art.html" class="active">艺术类</a>
+                <a href="agent.html">Agent开发</a>
+                <a href="rl.html">RL学习</a>
+            </nav>
+            
+            <div class="contact">
+                <a href="mailto:your@email.com">Email</a>
+                <a href="https://github.com/gyzeal" target="_blank">GitHub</a>
+            </div>
+        </aside>
 
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 我的博客. All rights reserved.</p>
-            <p>Built with ❤️ using HTML & CSS</p>
-        </div>
-    </footer>
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <div class="category-header">
+                <h1>艺术类</h1>
+                <p class="category-description">艺术创作与欣赏，美学思考与探索</p>
+            </div>
+
+            <div class="posts-list">
+                <!-- 示例文章 -->
+                <article class="post-item">
+                    <h3><a href="posts/example-post.html">欢迎来到我的博客</a></h3>
+                    <div class="post-meta">
+                        <span class="date">Date: November 6, 2025</span>
+                        <span class="category">Category: 艺术类</span>
+                    </div>
+                    <p class="post-excerpt">这是一篇示例文章，展示博客的基本格式和样式。你可以在这里写关于艺术、设计、创作的内容...</p>
+                    <a href="posts/example-post.html" class="read-more">Read More</a>
+                </article>
+
+                <!-- 当写新的艺术类文章时，在这里添加新的 article 块 -->
+                
+            </div>
+        </main>
+    </div>
 </body>
 </html>
 

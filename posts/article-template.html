@@ -3,91 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文章标题 - 我的博客</title>
+    <title>文章标题</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- 导航栏 -->
-    <header>
-        <div class="container">
-            <h1 class="site-title"><a href="../index.html">我的博客</a></h1>
-            <nav class="main-nav">
-                <a href="../index.html">首页</a>
-                <a href="../art.html">🎨 艺术类</a>
-                <a href="../agent.html">🤖 Agent开发</a>
-                <a href="../rl.html">🧠 RL学习</a>
+    <div class="layout">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="../avatar.jpg" alt="Profile Photo" class="avatar">
+                <h2 class="name">Your Name</h2>
+                <p class="bio">简短的个人介绍</p>
+            </div>
+            
+            <nav class="nav">
+                <a href="../index.html">Posts</a>
+                <a href="../art.html">艺术类</a>
+                <a href="../agent.html">Agent开发</a>
+                <a href="../rl.html">RL学习</a>
             </nav>
-        </div>
-    </header>
+            
+            <div class="contact">
+                <a href="mailto:your@email.com">Email</a>
+                <a href="https://github.com/gyzeal" target="_blank">GitHub</a>
+            </div>
+        </aside>
 
-    <main class="container">
-        <!-- 文章内容 -->
-        <article class="post-container">
-            <header class="post-header">
-                <h1>文章标题</h1>
-                <div class="post-meta">
-                    <span class="date">📅 2025-11-06</span>
-                    <!-- 修改分类链接：art.html / agent.html / rl.html -->
-                    <span class="category">📁 <a href="../art.html">艺术类</a></span>
-                </div>
-            </header>
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <article class="post-container">
+                <header class="post-header">
+                    <h1>文章标题</h1>
+                    <div class="post-meta">
+                        <span class="date">Date: November 6, 2025</span>
+                        <!-- 修改分类链接：art.html / agent.html / rl.html -->
+                        <span class="category">Category: <a href="../art.html">艺术类</a></span>
+                        <span class="reading-time">Estimated Reading Time: 5 min</span>
+                    </div>
+                </header>
 
-            <div class="post-content">
-                <!-- 
-                    在这里写你的文章内容
-                    支持的HTML标签：
-                    - <h2>大标题</h2>
-                    - <h3>小标题</h3>
-                    - <p>段落</p>
-                    - <ul><li>无序列表</li></ul>
-                    - <ol><li>有序列表</li></ol>
-                    - <code>行内代码</code>
-                    - <pre><code>代码块</code></pre>
-                    - <blockquote>引用</blockquote>
-                    - <img src="image.jpg" alt="描述">
-                -->
+                <div class="post-content">
+                    <!-- 
+                        在这里写你的文章内容
+                        支持的HTML标签：
+                        - <h2>大标题</h2>
+                        - <h3>小标题</h3>
+                        - <p>段落</p>
+                        - <ul><li>无序列表</li></ul>
+                        - <ol><li>有序列表</li></ol>
+                        - <code>行内代码</code>
+                        - <pre><code>代码块</code></pre>
+                        - <blockquote>引用</blockquote>
+                        - <img src="image.jpg" alt="描述">
+                    -->
 
-                <p>这是第一段内容...</p>
+                    <p>这是第一段内容...</p>
 
-                <h2>子标题</h2>
-                <p>这是第二段内容...</p>
+                    <h2>子标题</h2>
+                    <p>这是第二段内容...</p>
 
-                <h3>更小的标题</h3>
-                <p>更多内容...</p>
+                    <h3>更小的标题</h3>
+                    <p>更多内容...</p>
 
-                <ul>
-                    <li>列表项 1</li>
-                    <li>列表项 2</li>
-                    <li>列表项 3</li>
-                </ul>
+                    <ul>
+                        <li>列表项 1</li>
+                        <li>列表项 2</li>
+                        <li>列表项 3</li>
+                    </ul>
 
-                <p>这里是一段<code>行内代码</code>示例。</p>
+                    <p>这里是一段<code>行内代码</code>示例。</p>
 
-                <pre><code>// 这是代码块
+                    <pre><code>// 这是代码块
 function example() {
     console.log("Hello World");
 }</code></pre>
 
-                <blockquote>
-                    这是一段引用文字。
-                </blockquote>
+                    <blockquote>
+                        这是一段引用文字。
+                    </blockquote>
 
-            </div>
+                </div>
 
-            <footer class="post-footer">
-                <!-- 修改返回链接：art.html / agent.html / rl.html -->
-                <a href="../art.html" class="back-link">← 返回艺术类</a>
-            </footer>
-        </article>
-    </main>
-
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 我的博客. All rights reserved.</p>
-            <p>Built with ❤️ using HTML & CSS</p>
-        </div>
-    </footer>
+                <footer class="post-footer">
+                    <!-- 修改返回链接：art.html / agent.html / rl.html -->
+                    <a href="../art.html" class="back-link">Back to 艺术类</a>
+                </footer>
+            </article>
+        </main>
+    </div>
 </body>
 </html>
 
