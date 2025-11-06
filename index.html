@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客 - 首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <h1 class="site-title"><a href="index.html">我的博客</a></h1>
+            <nav class="main-nav">
+                <a href="index.html" class="active">首页</a>
+                <a href="art.html">🎨 艺术类</a>
+                <a href="agent.html">🤖 Agent开发</a>
+                <a href="rl.html">🧠 RL学习</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 欢迎区域 -->
+        <section class="welcome-section">
+            <h2>欢迎来到我的博客</h2>
+            <p>在这里分享关于艺术、AI Agent 开发和强化学习的思考与实践</p>
+        </section>
+
+        <!-- 分类导航卡片 -->
+        <section class="categories-section">
+            <h2>博客分类</h2>
+            <div class="category-grid">
+                <a href="art.html" class="category-card">
+                    <div class="category-icon">🎨</div>
+                    <h3>艺术类</h3>
+                    <p>艺术创作与欣赏，美学思考</p>
+                    <span class="post-count">0 篇文章</span>
+                </a>
+                
+                <a href="agent.html" class="category-card">
+                    <div class="category-icon">🤖</div>
+                    <h3>Agent开发类</h3>
+                    <p>AI Agent 开发实践与探索</p>
+                    <span class="post-count">0 篇文章</span>
+                </a>
+                
+                <a href="rl.html" class="category-card">
+                    <div class="category-icon">🧠</div>
+                    <h3>RL学习类</h3>
+                    <p>强化学习理论与应用</p>
+                    <span class="post-count">0 篇文章</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 最新文章 -->
+        <section class="recent-posts">
+            <h2>最新文章</h2>
+            <div class="posts-list">
+                <!-- 示例文章，写新文章时在这里添加 -->
+                <article class="post-item">
+                    <h3><a href="posts/example-post.html">欢迎来到我的博客</a></h3>
+                    <div class="post-meta">
+                        <span class="date">📅 2025-11-06</span>
+                        <span class="category">📁 <a href="art.html">艺术类</a></span>
+                    </div>
+                    <p class="post-excerpt">这是一篇示例文章，展示博客的基本格式和样式...</p>
+                    <a href="posts/example-post.html" class="read-more">阅读全文 →</a>
+                </article>
+
+                <!-- 添加更多文章时，复制上面的 article 结构 -->
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 我的博客. All rights reserved.</p>
+            <p>Built with ❤️ using HTML & CSS</p>
+        </div>
+    </footer>
+</body>
+</html>
+
