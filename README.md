@@ -1,13 +1,14 @@
-# gyzeal.github.io
+# 个人博客
 
-个人博客网站 - 使用纯静态 HTML 构建
+简洁的个人博客网站，使用纯静态 HTML 构建。
 
-## 📁 项目结构
+## 项目结构
 
 ```
 gyzeal.github.io/
-├── index.html              # 首页
+├── index.html              # 首页（文章归档列表）
 ├── style.css               # 全局样式
+├── avatar.jpg              # 个人头像（需要自己添加）
 ├── art.html                # 艺术类分类页
 ├── agent.html              # Agent开发类分类页
 ├── rl.html                 # RL学习类分类页
@@ -17,65 +18,95 @@ gyzeal.github.io/
 └── README.md               # 说明文档
 ```
 
-## 🎨 博客分类
+## 初始设置
 
-- **艺术类** - 艺术创作与欣赏，美学思考
-- **Agent开发类** - AI Agent 开发实践与探索
-- **RL学习类** - 强化学习理论与应用
+### 1. 添加个人头像
 
-## ✍️ 如何写新文章
+将你的头像图片命名为 `avatar.jpg`，放在根目录下。建议使用正方形图片（如 400x400px）。
+
+### 2. 修改个人信息
+
+编辑所有页面中的左侧边栏信息：
+
+```html
+<div class="profile">
+    <img src="avatar.jpg" alt="Profile Photo" class="avatar">
+    <h2 class="name">Your Name</h2>  <!-- 修改为你的名字 -->
+    <p class="bio">简短的个人介绍</p>  <!-- 修改个人介绍 -->
+</div>
+
+<div class="contact">
+    <a href="mailto:your@email.com">Email</a>  <!-- 修改邮箱 -->
+    <a href="https://github.com/gyzeal" target="_blank">GitHub</a>  <!-- 修改GitHub链接 -->
+</div>
+```
+
+需要修改的文件：
+- index.html
+- art.html
+- agent.html
+- rl.html
+- posts/article-template.html
+- posts/example-post.html
+
+## 如何写新文章
 
 ### 步骤 1：创建文章页面
 
 1. 复制 `posts/article-template.html` 文件
-2. 重命名为你的文章名（例如：`my-first-post.html`）
+2. 重命名为你的文章名（建议：`2025-11-06-article-title.html`）
 3. 编辑文件内容：
-   - 修改 `<title>` 标签中的标题
+   - 修改 `<title>` 标签
    - 修改文章标题 `<h1>`
-   - 修改日期和分类信息
-   - 在 `<div class="post-content">` 中写入文章内容
-   - 修改页脚的返回链接
+   - 修改日期和分类
+   - 在 `<div class="post-content">` 中写入内容
+   - 修改返回链接
 
-### 步骤 2：添加到分类页面
+### 步骤 2：添加到首页归档
 
-根据文章分类，编辑对应的分类页面（`art.html` / `agent.html` / `rl.html`）：
-
-1. 找到 `<div class="posts-list">` 部分
-2. 添加以下代码：
+编辑 `index.html`，在对应的年份/月份下添加：
 
 ```html
-<article class="post-item">
-    <h3><a href="posts/你的文章.html">文章标题</a></h3>
-    <div class="post-meta">
-        <span class="date">📅 2025-11-06</span>
-        <span class="category">📁 分类名称</span>
+<article class="post-entry">
+    <a href="posts/your-article.html" class="post-title">文章标题</a>
+    <div class="post-info">
+        <span class="post-date">Date: November 6, 2025</span>
+        <span class="post-meta">Estimated Reading Time: 5 min</span>
+        <span class="post-author">Author: Your Name</span>
     </div>
-    <p class="post-excerpt">文章摘要...</p>
-    <a href="posts/你的文章.html" class="read-more">阅读全文 →</a>
 </article>
 ```
 
-### 步骤 3：添加到首页
+如果需要添加新的年份或月份：
 
-编辑 `index.html`，在"最新文章"部分添加同样的文章卡片。
-
-## 🚀 发布到 GitHub Pages
-
-1. 提交所有文件到 GitHub 仓库
-```bash
-git add .
-git commit -m "Add new post"
-git push origin main
+```html
+<section class="year-section">
+    <h2 class="year">2025 <sup>1</sup></h2>  <!-- sup中的数字是该年的文章数 -->
+    
+    <div class="month-section">
+        <h3 class="month">November <sup>1</sup></h3>  <!-- sup中的数字是该月的文章数 -->
+        <!-- 文章列表 -->
+    </div>
+</section>
 ```
 
-2. 在 GitHub 仓库设置中启用 GitHub Pages
-   - Settings → Pages
-   - Source 选择 `main` 分支
-   - 保存后等待几分钟
+### 步骤 3：添加到分类页面
 
-3. 访问 `https://gyzeal.github.io` 查看你的博客
+编辑对应的分类页面（`art.html` / `agent.html` / `rl.html`）：
 
-## 🎯 支持的内容格式
+```html
+<article class="post-item">
+    <h3><a href="posts/your-article.html">文章标题</a></h3>
+    <div class="post-meta">
+        <span class="date">Date: November 6, 2025</span>
+        <span class="category">Category: 艺术类</span>
+    </div>
+    <p class="post-excerpt">文章摘要...</p>
+    <a href="posts/your-article.html" class="read-more">Read More</a>
+</article>
+```
+
+## 支持的内容格式
 
 ### 标题
 ```html
@@ -117,25 +148,50 @@ git push origin main
 </blockquote>
 ```
 
+### 链接
+```html
+<a href="https://example.com">链接文本</a>
+```
+
 ### 图片
 ```html
 <img src="path/to/image.jpg" alt="图片描述">
 ```
 
-## 💡 提示
+## 发布到 GitHub Pages
 
-- 文章建议按日期命名，如：`2025-11-06-my-post.html`
-- 定期备份文章内容
-- 可以使用任何文本编辑器编辑 HTML 文件
-- 在浏览器中本地预览：直接双击打开 `index.html`
+1. 提交所有文件到 GitHub 仓库：
+```bash
+git add .
+git commit -m "Update blog"
+git push origin main
+```
 
-## 🔄 未来升级
+2. 在 GitHub 仓库设置中启用 GitHub Pages：
+   - 进入 Settings → Pages
+   - Source 选择 `main` 分支
+   - 保存后等待几分钟
+
+3. 访问 `https://gyzeal.github.io` 查看你的博客
+
+## 本地预览
+
+直接在浏览器中打开 `index.html` 文件即可预览。
+
+## 设计说明
+
+- 采用深色主题（背景 #1e1e1e，侧边栏 #252526）
+- 左侧固定边栏，右侧内容区域
+- 响应式设计，移动端自动调整布局
+- 简洁专业的排版风格
+
+## 未来升级
 
 如果需要更多功能，可以考虑迁移到：
 - **Jekyll** - 自动生成页面，支持 Markdown
 - **Hugo** - 速度更快的静态网站生成器
 - **Hexo** - 适合技术博客的生成器
 
-## 📝 许可证
+## 许可证
 
-MIT License - 自由使用和修改
+MIT License
